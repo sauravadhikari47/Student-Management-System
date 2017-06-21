@@ -32,5 +32,6 @@ public class UserSide extends JFrame{
 			
 		}
 	}
+	jpanel1=
 
 }
