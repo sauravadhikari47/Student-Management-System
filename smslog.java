@@ -72,6 +72,8 @@ public class smslog extends JFrame {
                 String ppaswd = pass.getText();
                 if (puname.equals("user") && ppaswd.equals("user")) {
                 // user side view
+                	UserSide us=new UserSide();
+                	us.setVisible(true);
                     dispose();
                 } else {
 

@@ -34,7 +34,7 @@ public class UserSide extends JFrame {
 			sql = "SELECT * FROM infoTable";
 			pstm = con.prepareStatement(sql);
 			r = pstm.executeQuery();
-			jTable1.setModel(resultSetToTableModel(r));;
+			jTable1.setModel(new DefaultTableModel());
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
@@ -113,8 +113,31 @@ public class UserSide extends JFrame {
 		});
 		GroupLayout jPanel2Layout = new GroupLayout(jpanel2);
 		jpanel2.setLayout(jPanel2Layout);
-		jPanel2Layout.setHorizontalGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel2Layout.createSequentialGroup().addGap(69, 69, 69).addComponent(lbl,GroupLayout.PREFERRED_SIZE, 162,GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(jTextField1,GroupLayout.PREFERRED_SIZE, 385,GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE).addComponent(jButton2).addGap(18, 18, 18).addComponent(jButton3).addGap(18, 18, 18).addComponent(jButton1,GroupLayout.PREFERRED_SIZE, 128,GroupLayout.PREFERRED_SIZE).addContainerGap()));
-		jPanel2Layout.setVerticalGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(jPanel2Layout.createSequentialGroup().addContainerGap().addGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(lbl, GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(jButton1, GroupLayout.Alignment.TRAILING,GroupLayout.PREFERRED_SIZE, 39, GroupLayout.PREFERRED_SIZE).addComponent(jButton2).addComponent(jButton3, GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(jTextField1)).addContainerGap()));
+		jPanel2Layout
+				.setHorizontalGroup(
+						jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+								.addGroup(
+										jPanel2Layout.createSequentialGroup().addGap(69, 69, 69)
+												.addComponent(lbl, GroupLayout.PREFERRED_SIZE, 162,
+														GroupLayout.PREFERRED_SIZE)
+												.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+												.addComponent(jTextField1, GroupLayout.PREFERRED_SIZE, 385,
+														GroupLayout.PREFERRED_SIZE)
+												.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 129,
+														Short.MAX_VALUE)
+												.addComponent(jButton2).addGap(18, 18, 18)
+												.addComponent(jButton3).addGap(18, 18, 18).addComponent(jButton1,
+														GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
+												.addContainerGap()));
+		jPanel2Layout.setVerticalGroup(jPanel2Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addGroup(jPanel2Layout.createSequentialGroup().addContainerGap().addGroup(jPanel2Layout
+						.createParallelGroup(GroupLayout.Alignment.LEADING)
+						.addComponent(lbl, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(jButton1, GroupLayout.Alignment.TRAILING, GroupLayout.PREFERRED_SIZE, 39,
+								GroupLayout.PREFERRED_SIZE)
+						.addComponent(jButton2)
+						.addComponent(jButton3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(jTextField1)).addContainerGap()));
 
 		jpanel1.setBackground(new java.awt.Color(0, 153, 255));
 
@@ -122,20 +145,26 @@ public class UserSide extends JFrame {
 
 		GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jpanel1);
 		jpanel1.setLayout(jPanel1Layout);
-		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE));
-		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jButton4,GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE));
+		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
 		jpanel3.setBackground(new java.awt.Color(51, 153, 255));
 
 		GroupLayout jPanel3Layout = new GroupLayout(jpanel3);
 		jpanel3.setLayout(jPanel3Layout);
-		jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 0, Short.MAX_VALUE));
-		jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 0, Short.MAX_VALUE));
+		jPanel3Layout.setHorizontalGroup(
+				jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 0, Short.MAX_VALUE));
+		jPanel3Layout.setVerticalGroup(
+				jPanel3Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 0, Short.MAX_VALUE));
 
 		GroupLayout jPanel4Layout = new GroupLayout(jpanel4);
 		jpanel4.setLayout(jPanel4Layout);
-		jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 63, Short.MAX_VALUE));
-		jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 812, Short.MAX_VALUE));
+		jPanel4Layout.setHorizontalGroup(
+				jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 63, Short.MAX_VALUE));
+		jPanel4Layout.setVerticalGroup(
+				jPanel4Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 812, Short.MAX_VALUE));
 
 		jTable1.setBackground(new Color(204, 255, 204));
 		jTable1.setFont(new Font("Tahoma", 0, 14)); // NOI18N
@@ -148,8 +177,31 @@ public class UserSide extends JFrame {
 
 		GroupLayout layout = new GroupLayout(getContentPane());
 		getContentPane().setLayout(layout);
-		layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addGap(1122, 1122, 1122).addComponent(jpanel3, GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(jpanel4,GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,Short.MAX_VALUE)).addComponent(jpanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,Short.MAX_VALUE).addComponent(jpanel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE,Short.MAX_VALUE).addComponent(jScrollPanel));
-		layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addComponent(jpanel1, GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(jpanel2, GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE).addGap(15, 15, 15).addComponent(jScrollPanel, GroupLayout.PREFERRED_SIZE, 743,GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED,GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(jpanel4,GroupLayout.PREFERRED_SIZE,GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addComponent(jpanel3, GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addGap(823, 823, 823)));
+		layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup().addGap(1122, 1122, 1122)
+						.addComponent(jpanel3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+						.addComponent(jpanel4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+				.addComponent(jpanel1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+				.addComponent(jpanel2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+				.addComponent(jScrollPanel));
+		layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+				.addGroup(layout.createSequentialGroup()
+						.addComponent(jpanel1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+						.addComponent(jpanel2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addGap(15, 15, 15)
+						.addComponent(jScrollPanel, GroupLayout.PREFERRED_SIZE, 743, GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE,
+								Short.MAX_VALUE)
+						.addComponent(jpanel4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								GroupLayout.PREFERRED_SIZE)
+						.addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+						.addComponent(jpanel3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addGap(823, 823, 823)));
 		pack();
 	}
 
@@ -159,7 +211,7 @@ public class UserSide extends JFrame {
 
 	private void jButton1ActionPerformed(ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
 		// TODO add your handling code here:
-		// new StudentInformationSystem();
+		new smslog();
 		dispose();
 	}// GEN-LAST:event_jButton1ActionPerformed
 
@@ -171,7 +223,7 @@ public class UserSide extends JFrame {
 			pstm = con.prepareStatement(sql);
 			pstm.setString(1, jTextField1.getText());
 			r = pstm.executeQuery();
-			jTable1.setModel(DbUtils.resultSetToTableModel(r));
+			jTable1.setModel(new DefaultTableModel());
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
@@ -204,13 +256,16 @@ public class UserSide extends JFrame {
 		dispose();
 	}// GEN-LAST:event_jButton2ActionPerformed
 
-	
 	public static void main(String args[]) {
 		/* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting
+		// code (optional) ">
+		/*
+		 * If Nimbus (introduced in Java SE 6) is not available, stay with the
+		 * default look and feel. For details see
+		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.
+		 * html
+		 */
 		try {
 			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
@@ -229,7 +284,7 @@ public class UserSide extends JFrame {
 		}
 
 		/* Create and display the form */
-		java.awt.EventQueue.invokeLater(new Runnable() {
+		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				new UserSide().setVisible(true);
 			}
