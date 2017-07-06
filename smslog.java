@@ -1,3 +1,4 @@
+package StudentMgmtSys;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -5,7 +6,7 @@ import java.awt.event.*;
 public class smslog extends JFrame {
 
     public static void main(String[] args) {
-        smslog sl= new smslog();
+         new smslog();
 
     }
 
@@ -22,7 +23,8 @@ public class smslog extends JFrame {
         p1 = new JPanel();
         p1.setLayout(null);
         p1.setBackground(Color.yellow);
-        img = new ImageIcon(getClass().getResource("/src/User-icon.png"));
+        
+        img = new ImageIcon(getClass().getResource("apple.png"));
         l1 = new JLabel(img);
         l1.setBounds(0, 0, 215, 360);
 

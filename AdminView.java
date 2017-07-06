@@ -1,3 +1,5 @@
+package StudentMgmtSys;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.table.*;
@@ -80,7 +82,7 @@ public class AdminView extends JFrame {
 
 		label2.setText("label2");
 
-		jButton4.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/header.jpg"))); // NOI18N
+		jButton4.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/header.jpg"))); // NOI18N
 		jButton4.setBorderPainted(false);
 		jButton4.setContentAreaFilled(false);
 		jButton4.setDefaultCapable(false);
@@ -121,7 +123,7 @@ public class AdminView extends JFrame {
 
 		jButton1.setBackground(new Color(51, 255, 0));
 		jButton1.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton1.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/back.png"))); // NOI18N
+		jButton1.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/back.png"))); // NOI18N
 		jButton1.setText("Back");
 		jButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -131,7 +133,7 @@ public class AdminView extends JFrame {
 
 		jButton2.setBackground(new Color(102, 255, 51));
 		jButton2.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/erase-128.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase-128.png"))); // NOI18N
 		jButton2.setText("Reset");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -141,7 +143,7 @@ public class AdminView extends JFrame {
 
 		jButton3.setBackground(new Color(102, 255, 0));
 		jButton3.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton3.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/person-icon.png"))); // NOI18N
+		jButton3.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/person-icon.png"))); // NOI18N
 		jButton3.setText(" Show Individual");
 		jButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {

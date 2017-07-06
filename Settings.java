@@ -1,3 +1,4 @@
+package StudentMgmtSys;
 import java.awt.*;
 import java.sql.*;
 public class Settings {

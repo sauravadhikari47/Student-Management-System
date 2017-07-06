@@ -1,3 +1,5 @@
+package StudentMgmtSys;
+
 import java.sql.*;
 import javax.swing.*;
 public class dbconnect {
