@@ -3,6 +3,7 @@ import java.awt.event.*;
 import javax.swing.table.*;
 import javax.swing.*;
 import java.sql.*;
+import net.proteanit.sql.DbUtils;
 
 public class AdminView extends JFrame {
 	Connection conn = null;
@@ -27,7 +28,7 @@ public class AdminView extends JFrame {
 		// size.height / 2 - getHeight() / 2);
 		setLocation(60, 0);
 		setResizable(false);
-		setTitle("Student Information System");
+		setTitle("Student Management System");
 		updatetable();
 
 	}
@@ -35,7 +36,7 @@ public class AdminView extends JFrame {
 	private void updatetable() {
 		try {
 
-			String sql = "select * from information";
+			String sql = "select * from infoTable";
 
 			pst = conn.prepareStatement(sql);
 			rs = pst.executeQuery();

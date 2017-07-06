@@ -5,7 +5,7 @@ import java.awt.event.*;
 public class smslog extends JFrame {
 
     public static void main(String[] args) {
-         new smslog();
+        smslog sl= new smslog();
 
     }
 
@@ -22,6 +22,9 @@ public class smslog extends JFrame {
         p1 = new JPanel();
         p1.setLayout(null);
         p1.setBackground(Color.yellow);
+        img = new ImageIcon(getClass().getResource("/src/User-icon.png"));
+        l1 = new JLabel(img);
+        l1.setBounds(0, 0, 215, 360);
 
        
         l1 = new JLabel("Username");
@@ -93,6 +96,8 @@ public class smslog extends JFrame {
                 String ppaswd = pass.getText();
                 if (puname.equals("admin") && ppaswd.equals("admin")) {
                    // admin side view
+                	AdminView av=new AdminView();
+                	av.setVisible(true);
                     dispose();
                 } else {
 

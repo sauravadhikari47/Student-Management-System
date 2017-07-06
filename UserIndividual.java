@@ -25,7 +25,7 @@ public class UserIndividual extends JFrame {
 		Dimension size = toolkit.getScreenSize();
 		setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
 		setResizable(false);
-		setTitle("Student Information System");
+		setTitle("Student Management System");
 
 	}
 
@@ -658,11 +658,11 @@ public class UserIndividual extends JFrame {
 		pack();
 	}// </editor-fold>//GEN-END:initComponents
 
-	private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jTextField1ActionPerformed
+	private void jTextField1ActionPerformed(ActionEvent evt) {// GEN-FIRST:event_jTextField1ActionPerformed
 
 	}// GEN-LAST:event_jTextField1ActionPerformed
 
-	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
+	private void jButton2ActionPerformed(ActionEvent evt) {// GEN-FIRST:event_jButton2ActionPerformed
 		jTextField1.setText("");
 		jTextField2.setText("");
 		jTextField3.setText("");
@@ -709,7 +709,7 @@ public class UserIndividual extends JFrame {
 		PreparedStatement pst = null;
 
 		try (Connection conn = dbconnect.java_db()) {
-			String sql = "select * from information where student_id=? ";
+			String sql = "select * from infoTable where student_id=? ";
 
 			pst = conn.prepareStatement(sql);
 			pst.setString(1, jTextField1.getText());

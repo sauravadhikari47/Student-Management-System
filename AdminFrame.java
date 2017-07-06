@@ -261,7 +261,7 @@ public class AdminFrame extends JFrame {
 		setLocationRelativeTo(null);
 		setResizable(false);
 		setVisible(true);
-		setTitle("Student Information System Adminstrator Panel");
+		setTitle("Student Management System Adminstrator Panel");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		shows();
@@ -344,7 +344,7 @@ public class AdminFrame extends JFrame {
 						JOptionPane.showConfirmDialog(null, "Are you sure Insert Data?", "Delete",
 								JOptionPane.YES_NO_OPTION);
 						PreparedStatement ps = conn.prepareStatement(
-								"INSERT INTO information(form_id,batch_no,student_id,first_name,middle_name,"
+								"INSERT INTO infoTable(form_id,batch_no,student_id,first_name,middle_name,"
 										+ "last_name,email,contact,dob,father_name,mother_name,permanent_add,"
 										+ "temporary_add,particular_school,particular_higherschool,name_of_school,"
 										+ "name_of_higherschool,percentage_school,percentage_higherschool,"

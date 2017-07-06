@@ -4,7 +4,7 @@ import java.util.*;
 import javax.swing.*;
 import java.sql.*;
 import javax.swing.table.*;
-
+import net.proteanit.sql.DbUtils;
 public class UserSide extends JFrame {
 	Connection con;
 	ResultSet r;
@@ -34,7 +34,7 @@ public class UserSide extends JFrame {
 			sql = "SELECT * FROM infoTable";
 			pstm = con.prepareStatement(sql);
 			r = pstm.executeQuery();
-			jTable1.setModel(new DefaultTableModel());
+			jTable1.setModel((DbUtils.resultSetToTableModel(r)));
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
@@ -84,7 +84,7 @@ public class UserSide extends JFrame {
 
 		jButton1.setBackground(new Color(102, 255, 0));
 		jButton1.setFont(new Font("Tahoma", 1, 14));
-		jButton1.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/logout.png"))); // NOI18N
+		jButton1.setIcon(new ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
 		jButton1.setText("Logout");
 		jButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -94,7 +94,7 @@ public class UserSide extends JFrame {
 
 		jButton2.setBackground(new Color(153, 255, 0));
 		jButton2.setFont(new Font("Tahoma", 1, 14));
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/person-icon.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/img/person-icon.png"))); // NOI18N
 		jButton2.setText("Show Individual");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -104,7 +104,7 @@ public class UserSide extends JFrame {
 
 		jButton3.setBackground(new Color(102, 255, 0));
 		jButton3.setFont(new Font("Tahoma", 1, 14)); // NOI18N
-		jButton3.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/erase-128.png"))); // NOI18N
+		jButton3.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/erase.png"))); // NOI18N
 		jButton3.setText("Reset");
 		jButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -223,7 +223,7 @@ public class UserSide extends JFrame {
 			pstm = con.prepareStatement(sql);
 			pstm.setString(1, jTextField1.getText());
 			r = pstm.executeQuery();
-			jTable1.setModel(new DefaultTableModel());
+			jTable1.setModel(DbUtils.resultSetToTableModel(r));
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
