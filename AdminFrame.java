@@ -1,3 +1,5 @@
+package StudentMgmtSys;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -48,21 +50,21 @@ public class AdminFrame extends JFrame {
 		label1.setBounds(20, -5, 300, 50);
 		save = new JButton("Save Record");
 		save.setBounds(950, 0, 120, 40);
-		save.setBackground(Color.green);
+		save.setBackground(new Color(128, 255, 0));
 		p2.add(save);
 		show = new JButton("show Record");
 		show.setBounds(1080, 0, 110, 40);
-		show.setBackground(Color.green);
+		show.setBackground(new Color(128, 255, 0));
 		p2.add(show);
 		logout = new JButton("Log-Out");
 		logout.setBounds(820, 0, 120, 40);
-		logout.setBackground(Color.green);
+		logout.setBackground(new Color(128, 255, 0));
 		p2.add(logout);
 
 		// third panel
 		p3 = new JPanel();
 		p3.setLayout(null);
-		p3.setBackground(new Color(135, 206, 250));
+		p3.setBackground(new Color(150, 150, 255));
 		p3.setBounds(0, 80, 1200, 400);
 
 		// fourth panel
@@ -79,7 +81,7 @@ public class AdminFrame extends JFrame {
 		// fifth panel
 		p5 = new JPanel();
 		p5.setLayout(null);
-		p5.setBackground(new Color(135, 206, 250));
+		p5.setBackground(new Color(150, 150, 255));
 		JLabel slc = new JLabel("Level");
 		slc.setBounds(40, 540, 100, 30);
 		slc.setFont(new Font(slc.getName(), Font.BOLD, 18));

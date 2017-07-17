@@ -121,7 +121,7 @@ public class AdminView extends JFrame {
 			}
 		});
 
-		jButton1.setBackground(new Color(51, 255, 0));
+		jButton1.setBackground(new Color(102, 255, 0));
 		jButton1.setFont(new Font("Tahoma", 1, 12)); // NOI18N
 		jButton1.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/back.png"))); // NOI18N
 		jButton1.setText("Back");
@@ -133,7 +133,7 @@ public class AdminView extends JFrame {
 
 		jButton2.setBackground(new Color(102, 255, 51));
 		jButton2.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase-128.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase.png"))); // NOI18N
 		jButton2.setText("Reset");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -143,7 +143,7 @@ public class AdminView extends JFrame {
 
 		jButton3.setBackground(new Color(102, 255, 0));
 		jButton3.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton3.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/person-icon.png"))); // NOI18N
+		jButton3.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/ppl.png"))); // NOI18N
 		jButton3.setText(" Show Individual");
 		jButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -288,15 +288,6 @@ public class AdminView extends JFrame {
 	 *            the command line arguments
 	 */
 	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting
-		// code (optional) ">
-		/*
-		 * If Nimbus (introduced in Java SE 6) is not available, stay with the
-		 * default look and feel. For details see
-		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.
-		 * html
-		 */
 		try {
 			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {

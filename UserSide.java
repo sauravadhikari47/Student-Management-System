@@ -1,18 +1,20 @@
 package StudentMgmtSys;
+
 import java.awt.*;
 import java.awt.event.*;
-import java.util.*;
 import javax.swing.*;
 import java.sql.*;
 import javax.swing.table.*;
 import net.proteanit.sql.DbUtils;
+
 public class UserSide extends JFrame {
-	Connection con;
-	ResultSet r;
-	PreparedStatement pstm;
+	Connection con=null;
+	ResultSet r=null;
+	PreparedStatement pstm=null;
 	String sql;
 	JPanel jpanel1, jpanel2, jpanel3, jpanel4;
 	JLabel lbl;
+	Label label1;
 	JButton jButton1, jButton2, jButton3, jButton4;
 	JScrollPane jScrollPanel;
 	JTable jTable1;
@@ -20,26 +22,28 @@ public class UserSide extends JFrame {
 
 	public UserSide() {
 		// TODO Auto-generated constructor stub
-		con = Settings.getDBCOnnection();
+		con = dbconnect.java_db();
 		Toolkit tk = this.getToolkit();
 		Dimension size = tk.getScreenSize();
-		this.setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
+		//this.setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
+		this.setLocation(60,0);
 		this.setResizable(false);
 		setTitle("Student Management System");
-		updateTable();
+		updatetable();
 
 	}
 
-	private void updateTable() {
+	private void updatetable() {
 		try {
-			sql = "SELECT * FROM infoTable";
+
+			String sql = "select * from infoTable";
+
 			pstm = con.prepareStatement(sql);
 			r = pstm.executeQuery();
-			jTable1.setModel((DbUtils.resultSetToTableModel(r)));
+			jTable1.setModel(DbUtils.resultSetToTableModel(r));
 
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, e);
-
 		} finally {
 
 			try {
@@ -52,11 +56,14 @@ public class UserSide extends JFrame {
 		}
 	}
 
+
 	void initComponents() {
 		jpanel1 = new JPanel();
+		label1 = new Label();
 		jpanel2 = new JPanel();
 		jpanel3 = new JPanel();
 		jpanel4 = new JPanel();
+		jTextField1=new JTextField();
 		lbl = new JLabel();
 		jButton1 = new JButton();
 		jButton2 = new JButton();
@@ -85,7 +92,7 @@ public class UserSide extends JFrame {
 
 		jButton1.setBackground(new Color(102, 255, 0));
 		jButton1.setFont(new Font("Tahoma", 1, 14));
-		jButton1.setIcon(new ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
+		jButton1.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/logout.png"))); // NOI18N
 		jButton1.setText("Logout");
 		jButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -93,9 +100,9 @@ public class UserSide extends JFrame {
 			}
 		});
 
-		jButton2.setBackground(new Color(153, 255, 0));
+		jButton2.setBackground(new Color(102, 255, 0));
 		jButton2.setFont(new Font("Tahoma", 1, 14));
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/img/person-icon.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/ppl.png"))); // NOI18N
 		jButton2.setText("Show Individual");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -103,9 +110,9 @@ public class UserSide extends JFrame {
 			}
 		});
 
-		jButton3.setBackground(new Color(102, 255, 0));
+		jButton3.setBackground(new Color(102, 255, 51));
 		jButton3.setFont(new Font("Tahoma", 1, 14)); // NOI18N
-		jButton3.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/erase.png"))); // NOI18N
+		jButton3.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase.png"))); // NOI18N
 		jButton3.setText("Reset");
 		jButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -140,18 +147,18 @@ public class UserSide extends JFrame {
 						.addComponent(jButton3, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(jTextField1)).addContainerGap()));
 
-		jpanel1.setBackground(new java.awt.Color(0, 153, 255));
+		jpanel1.setBackground(new Color(0, 153, 255));
 
-		jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/studentinformationsystem/headeruser.jpg"))); // NOI18N
+		jButton4.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/headeruser.jpg"))); // NOI18N
 
-		GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jpanel1);
+		GroupLayout jPanel1Layout = new GroupLayout(jpanel1);
 		jpanel1.setLayout(jPanel1Layout);
 		jPanel1Layout.setHorizontalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
 				.addComponent(jButton4, GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE));
 		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING)
 				.addComponent(jButton4, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 
-		jpanel3.setBackground(new java.awt.Color(51, 153, 255));
+		jpanel3.setBackground(new Color(51, 153, 255));
 
 		GroupLayout jPanel3Layout = new GroupLayout(jpanel3);
 		jpanel3.setLayout(jPanel3Layout);
@@ -174,6 +181,7 @@ public class UserSide extends JFrame {
 						new Object[][] { { null, null, null, null }, { null, null, null, null },
 								{ null, null, null, null }, { null, null, null, null } },
 						new String[] { "Title 1", "Title 2", "Title 3", "Title 4" }));
+		jTable1.setIntercellSpacing(new Dimension(2, 5));
 		jScrollPanel.setViewportView(jTable1);
 
 		GroupLayout layout = new GroupLayout(getContentPane());
@@ -219,7 +227,7 @@ public class UserSide extends JFrame {
 	private void jTextField1KeyReleased(KeyEvent evt) {// GEN-FIRST:event_jTextField1KeyReleased
 		// TODO add your handling code here:
 		try {
-			sql = "select * from infoTable where student_id = ? ";
+			String sql = "select * from infoTable where student_id = ? ";
 
 			pstm = con.prepareStatement(sql);
 			pstm.setString(1, jTextField1.getText());
@@ -236,6 +244,7 @@ public class UserSide extends JFrame {
 				pstm.close();
 
 			} catch (Exception e) {
+				
 
 			}
 
@@ -246,7 +255,7 @@ public class UserSide extends JFrame {
 	private void jButton3ActionPerformed(ActionEvent evt) {// GEN-FIRST:event_jButton3ActionPerformed
 		// TODO add your handling code here:
 
-		updateTable();
+		updatetable();
 		jTextField1.setText("");
 	}// GEN-LAST:event_jButton3ActionPerformed
 
@@ -258,15 +267,7 @@ public class UserSide extends JFrame {
 	}// GEN-LAST:event_jButton2ActionPerformed
 
 	public static void main(String args[]) {
-		/* Set the Nimbus look and feel */
-		// <editor-fold defaultstate="collapsed" desc=" Look and feel setting
-		// code (optional) ">
-		/*
-		 * If Nimbus (introduced in Java SE 6) is not available, stay with the
-		 * default look and feel. For details see
-		 * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.
-		 * html
-		 */
+
 		try {
 			for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {

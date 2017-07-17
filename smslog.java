@@ -10,23 +10,24 @@ public class smslog extends JFrame {
 
     }
 
-    JFrame f1;
-    JPanel p1;
-    JLabel l1, l2, l3;
-    JTextField t1;
-    JPasswordField pass;
-    JButton b1, b2;
-    ImageIcon img;
+    
+    private JPanel p1;
+    private JLabel l1, l2;
+    private JTextField t1;
+    private JPasswordField pass;
+    private JButton b1, b2;
+    private ImageIcon img;
 
     smslog() {
 
         p1 = new JPanel();
         p1.setLayout(null);
-        p1.setBackground(Color.yellow);
+        p1.setBackground(new Color(255, 255, 102));
         
-        img = new ImageIcon(getClass().getResource("apple.png"));
+        img = new ImageIcon(getClass().getResource("/StudentMgmtSys/User-icon.png"));
         l1 = new JLabel(img);
         l1.setBounds(0, 0, 215, 360);
+        this.add(l1);
 
        
         l1 = new JLabel("Username");
@@ -46,10 +47,12 @@ public class smslog extends JFrame {
         b1 = new JButton("User-Login");
         b1.setBounds(230, 250, 100, 50);
         b1.setBackground(new Color(204, 229, 255));
+        b1.setMnemonic('u');
 
         b2 = new JButton("Administrator-Login");
         b2.setBounds(400, 250, 150, 50);
         b2.setBackground(new Color(204, 229, 255));
+        b2.setMnemonic('a');
 
         p1.add(l1);
         p1.add(l2);

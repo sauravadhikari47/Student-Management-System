@@ -1,3 +1,5 @@
+package StudentMgmtSys;
+
 import java.awt.*;
 import java.io.*;
 import java.sql.*;
@@ -89,7 +91,7 @@ public class AdminIndividual extends JFrame {
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 		jButton1.setBackground(new Color(0, 51, 153));
-		jButton1.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/header.jpg"))); // NOI18N
+		jButton1.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/header.jpg"))); // NOI18N
 
 		jPanel1.setBackground(new Color(0, 102, 255));
 
@@ -107,7 +109,7 @@ public class AdminIndividual extends JFrame {
 			}
 		});
 
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/logout.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/logout.png"))); // NOI18N
 		jButton2.setText("Logged Out");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -115,7 +117,7 @@ public class AdminIndividual extends JFrame {
 			}
 		});
 
-		jButton3.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/update icon.png"))); // NOI18N
+		jButton3.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/update icon.png"))); // NOI18N
 		jButton3.setText("Update");
 		jButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -123,7 +125,7 @@ public class AdminIndividual extends JFrame {
 			}
 		});
 
-		jButton4.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/delete_16x16.gif"))); // NOI18N
+		jButton4.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/delete_16x16.gif"))); // NOI18N
 		jButton4.setText("Delete");
 		jButton4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -131,7 +133,7 @@ public class AdminIndividual extends JFrame {
 			}
 		});
 
-		jButton5.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/erase-128.png"))); // NOI18N
+		jButton5.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase.png"))); // NOI18N
 		jButton5.setText("Reset");
 		jButton5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -139,7 +141,7 @@ public class AdminIndividual extends JFrame {
 			}
 		});
 
-		jButton7.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/back.png"))); // NOI18N
+		jButton7.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/back.png"))); // NOI18N
 		jButton7.setText("Back");
 		jButton7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -170,7 +172,7 @@ public class AdminIndividual extends JFrame {
 		jTextField4.setFont(new Font("Tahoma", 1, 12)); // NOI18N
 
 		jLabel5.setFont(new Font("Tahoma", 1, 11)); // NOI18N
-		jLabel5.setText("Student IID");
+		jLabel5.setText("Student ID");
 
 		jTextField5.setFont(new Font("Tahoma", 1, 12)); // NOI18N
 
@@ -910,12 +912,12 @@ public class AdminIndividual extends JFrame {
 					String value20 = jTextField20.getText();
 					String value21 = jTextField22.getText();
 
-					String sql = "update infoTable set form_id='" + value1 + "',batch_no='" + value3
-							+ "', student_id='" + value4 + "', " + "first_name='" + value2 + "',middle_name='" + value5
-							+ "',last_name='" + value6 + "',email='" + value7 + "',contact= '" + value8 + "', "
-							+ "dob='" + value9 + "',father_name ='" + value10 + "',mother_name='" + value11
-							+ "',permanent_add='" + value12 + "',temporary_add='" + value13 + "',particular_school='"
-							+ value14 + "'," + "name_of_school='" + value15 + "',percentage_school='" + value16
+					String sql = "update infoTable set form_id='" + value1 + "',batch_no='" + value3 + "', student_id='"
+							+ value4 + "', " + "first_name='" + value2 + "',middle_name='" + value5 + "',last_name='"
+							+ value6 + "',email='" + value7 + "',contact= '" + value8 + "', " + "dob='" + value9
+							+ "',father_name ='" + value10 + "',mother_name='" + value11 + "',permanent_add='" + value12
+							+ "',temporary_add='" + value13 + "',particular_school='" + value14 + "',"
+							+ "name_of_school='" + value15 + "',percentage_school='" + value16
 							+ "',passed_year_school='" + value17 + "'," + "name_of_higherschool='" + value19
 							+ "',percentage_higherschool='" + value20 + "',passed_year_higherschool='" + value21
 							+ "',particular_higherschool='" + value18 + "'"

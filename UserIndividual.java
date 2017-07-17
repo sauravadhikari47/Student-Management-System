@@ -1,3 +1,5 @@
+package StudentMgmtSys;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.io.*;
@@ -81,10 +83,10 @@ public class UserIndividual extends JFrame {
 		jTextField21 = new JTextField();
 		jTextField22 = new JTextField();
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		jPanel1.setBackground(new Color(0, 153, 255));
+		jPanel1.setBackground(new Color(0, 51, 153));
 
 		jButton4.setBackground(new Color(0, 102, 255));
-		jButton4.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/headeruser.jpg"))); // NOI18N
+		jButton4.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/headeruser.jpg"))); // NOI18N
 		jButton4.setActionCommand("");
 
 		GroupLayout jPanel1Layout = new GroupLayout(jPanel1);
@@ -94,7 +96,7 @@ public class UserIndividual extends JFrame {
 		jPanel1Layout.setVerticalGroup(
 				jPanel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jButton4));
 
-		jPanel2.setBackground(new Color(0, 153, 255));
+		jPanel2.setBackground(new Color(0, 102, 255));
 
 		jLabel1.setFont(new Font("Tahoma", 1, 12)); // NOI18N
 		jLabel1.setText("Search Student By ID");
@@ -112,7 +114,7 @@ public class UserIndividual extends JFrame {
 
 		jButton1.setBackground(new Color(204, 204, 204));
 		jButton1.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton1.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/logout.png"))); // NOI18N
+		jButton1.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/logout.png"))); // NOI18N
 		jButton1.setText("Logged Out");
 		jButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -122,7 +124,7 @@ public class UserIndividual extends JFrame {
 
 		jButton2.setBackground(new Color(204, 204, 204));
 		jButton2.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/erase-128.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase-128.png"))); // NOI18N
 		jButton2.setText("Reset");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
@@ -132,7 +134,7 @@ public class UserIndividual extends JFrame {
 
 		jButton3.setBackground(new Color(204, 204, 204));
 		jButton3.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton3.setIcon(new ImageIcon(getClass().getResource("/studentinformationsystem/back.png"))); // NOI18N
+		jButton3.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/back.png"))); // NOI18N
 		jButton3.setText("Back");
 		jButton3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
