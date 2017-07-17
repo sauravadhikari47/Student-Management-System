@@ -22,11 +22,11 @@ public class UserSide extends JFrame {
 
 	public UserSide() {
 		// TODO Auto-generated constructor stub
+		initComponents();
 		con = dbconnect.java_db();
 		Toolkit tk = this.getToolkit();
 		Dimension size = tk.getScreenSize();
-		//this.setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
-		this.setLocation(60,0);
+		this.setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
 		this.setResizable(false);
 		setTitle("Student Management System");
 		updatetable();

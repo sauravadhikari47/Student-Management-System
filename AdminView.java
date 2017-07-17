@@ -11,6 +11,7 @@ public class AdminView extends JFrame {
 	Connection conn = null;
 	ResultSet rs = null;
 	PreparedStatement pst = null;
+	String sql;
 	private JButton jButton1, jButton2, jButton3, jButton4;
 	private JLabel lbl;
 	private JPanel jPanel1, jPanel2;
@@ -26,9 +27,8 @@ public class AdminView extends JFrame {
 		conn = dbconnect.java_db();
 		Toolkit toolkit = getToolkit();
 		Dimension size = toolkit.getScreenSize();
-		// setLocation(size.width / 2 - getWidth() / 2,
-		// size.height / 2 - getHeight() / 2);
-		setLocation(60, 0);
+		 setLocation(size.width / 2 - getWidth() / 2,size.height / 2 - getHeight() / 2);
+		//setLocation(60, 0);
 		setResizable(false);
 		setTitle("Student Management System");
 		updatetable();

@@ -124,7 +124,7 @@ public class UserIndividual extends JFrame {
 
 		jButton2.setBackground(new Color(204, 204, 204));
 		jButton2.setFont(new Font("Tahoma", 1, 12)); // NOI18N
-		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase-128.png"))); // NOI18N
+		jButton2.setIcon(new ImageIcon(getClass().getResource("/StudentMgmtSys/erase.png"))); // NOI18N
 		jButton2.setText("Reset");
 		jButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent evt) {
